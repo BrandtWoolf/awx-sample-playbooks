@@ -1,0 +1,11 @@
+---
+
+- hosts: all
+  tasks:
+    - name: debug msg for loop
+      debug:
+        msg: "{{ ansible_date_time.iso8601 }}"
+      loop:
+      until: True == False
+      retries: 1000
+      delay: 5
