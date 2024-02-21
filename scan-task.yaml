@@ -1,6 +1,0 @@
----
-
-- hosts: all
-  tasks:
-    - scan_packages:
-    - scan_services:
