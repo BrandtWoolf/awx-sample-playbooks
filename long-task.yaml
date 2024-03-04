@@ -2,6 +2,10 @@
 
 - hosts: all
   tasks:
+    - name: debug version
+      debug:
+        var: ansible_version
+
     - name: debug msg for loop
       debug:
         msg: "{{ ansible_date_time.iso8601 }}"
