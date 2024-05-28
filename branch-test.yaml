@@ -3,3 +3,7 @@
     - name: debug msg one
       debug:
         msg: "debug msg one"
+
+    - name: debug msg two
+      debug:
+        msg: "debug msg two"
