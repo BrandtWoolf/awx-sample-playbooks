@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: get secret
+      community.hashi_vault.vault_kv2_get:
+        path: apps/gtower/_testing
+        engine_mount_point: secret-kv2
+      register: secret
+
+    - name: debug vault response
+      debug:
+        msg: "{{ secret.secret.kittens }}"
