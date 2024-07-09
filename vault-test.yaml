@@ -6,6 +6,7 @@
       community.hashi_vault.vault_kv2_get:
         path: apps/gtower/_testing
         engine_mount_point: secret-kv2
+        validate_certs: false
       register: secret
 
     - name: debug vault response
